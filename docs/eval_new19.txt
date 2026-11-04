@@ -1,0 +1,120 @@
+未テスト19種 判定評価 (2026-10-26 JST) Perch v2 int8 + 庭30種マスク, 5秒窓, 0.08二窓/累積0.25 (Pi同設定)
+音源: Xeno-canto(GBIF経由,全てNC系ライセンス=評価専用・再配布不可) と iNaturalist(CC0/CC-BY/CC-BY-SA) ; ジョウビタキ・一部は日本外録音
+注: アオジ(4618→4626 Emberiza spodocephala)とキジ(10061→10060 Phasianus colchicus)はマスクの番号が実際のモデル出力と違う疑い。アオジは4626で6/6検出
+
+種	検出クリップ	窓ヒット	最大スコア	主な誤判定
+キジ	0/3	0/6	0.00	{}
+カワセミ	3/4	8/21	0.95	{'メジロ': 1, 'ヒヨドリ': 1}
+アカゲラ	1/4	7/20	0.39	{'ハシボソガラス': 1}
+オナガ	7/7	33/44	0.89	{}
+ハシブトガラス	5/7	29/37	0.89	{'ウグイス': 1}
+ヒガラ	7/7	37/42	0.97	{'ウグイス': 3}
+エナガ	7/7	39/40	0.95	{}
+シロハラ	0/2	1/10	0.24	{'シメ': 2}
+ツグミ	0/3	0/20	0.09	{'ヒヨドリ': 11, 'ウグイス': 2}
+イソヒヨドリ	2/7	11/44	0.32	{'ジョウビタキ': 2, 'カワセミ': 2, 'ウグイス': 1}
+キセキレイ	6/7	22/35	0.86	{'ハクセキレイ': 2, 'ヒヨドリ': 2, 'ハシボソガラス': 1}
+シメ	4/4	17/19	0.94	{}
+ウソ	2/4	8/16	0.57	{'ウグイス': 1, 'ハシブトガラス': 1}
+カワラヒワ	3/5	12/31	0.21	{'アカゲラ': 2, 'ヒガラ': 2, 'ホオジロ': 2}
+ホオジロ	4/5	23/25	0.96	{}
+アオジ	0/6	0/32	0.00	{}
+ジョウビタキ	2/6	9/37	0.30	{'ホオジロ': 1}
+ツバメ	3/3	8/8	0.86	{}
+カワラバト（ドバト）	2/3	7/15	0.54	{}
+
+clips: id	src	license	recordist	origin	result
+キジ	XC915200	CC BY-NC-SA 4.0	Uku Paal	Kyoto, Kyoto (call, rating 3)	miss hits 0/2 max 0.00
+カワセミ	XC712821	CC BY-NC-SA 4.0	Hugo Cobos	Kin, Okinawa Prefecture (call, rating 5)	miss hits 0/7 max 0.16
+カワセミ	XC286197	CC BY-NC-ND 4.0	Peter Boesman	Ose Beach, north part of Amami (call, rating 4)	det hits 4/4 max 0.51
+カワセミ	XC988630	CC BY-NC-SA 4.0	Andy Birch	Shijo Keihan mae (near  Kyoto), Kyoto (call, rating 3)	det hits 1/7 max 0.90
+カワセミ	XC712822	CC BY-NC-SA 4.0	Hugo Cobos	Kin, Okinawa Prefecture (call, rating 5)	det hits 3/3 max 0.95
+アカゲラ	XC420549	CC BY-NC-SA 4.0	Yann Muzika	Kushiro-shi, Hokkaidō (alarm call, rating 4)	det hits 7/8 max 0.39
+アカゲラ	XC285754	CC BY-NC-ND 4.0	Peter Boesman	Mount Fuji north side (call, rating 4)	miss hits 0/3 max 0.03
+アカゲラ	XC858013	CC BY-NC-SA 4.0	Joshua Chong	Lake Kussharo, Teshikaga, Hokkaido Prefe (call, rating 4)	miss hits 0/2 max 0.03
+アカゲラ	XC841037	CC BY-NC-SA 4.0	GABRIEL LEITE	Kibi taki Rest house (near  Karuizawa),  (call, rating 3)	miss hits 0/7 max 0.04
+オナガ	XC465141	CC BY-NC-SA 4.0	Aladdin	Kasai Rinkai Park (call, sounds like a call, rating 4)	det hits 7/8 max 0.82
+オナガ	XC818112	CC BY-NC-SA 4.0	Kim Chuah Lim	Karuizawa, Kitasaku District, Nagano (call, rating 4)	det hits 4/5 max 0.82
+オナガ	XC915074	CC BY-NC-SA 4.0	Uku Paal	Sumida City, Tokyo (call, rating 3)	det hits 3/8 max 0.52
+オナガ	XC490888	CC BY-NC-SA 4.0	Antony Schubert	Honshu (near  Edogawa City), Tōkyō-to (call, begging call, rating 3)	det hits 6/8 max 0.86
+ハシブトガラス	XC1016633	CC BY-NC-SA 4.0	Uku Paal	Taito City, Tokyo (call, rating 5)	det hits 8/8 max 0.84
+ハシブトガラス	XC530533	CC BY-NC-SA 4.0	Markus Jacobs	Rausu, Menashi-gun, Hokkaido (call, rating 5)	det hits 7/8 max 0.67
+ハシブトガラス	XC285700	CC BY-NC-ND 4.0	Peter Boesman	Karuizawa forest, Nagano Prefecture (call, rating 5)	det hits 6/8 max 0.89
+ハシブトガラス	XC155742	CC BY-NC-ND 4.0	Frank Lambert	Lake Furen (site 3) Hokkaido (call, rating 5)	det hits 6/8 max 0.81
+ヒガラ	XC285780	CC BY-NC-ND 4.0	Peter Boesman	Mount Fuji east side (song, rating 5)	det hits 8/8 max 0.97
+ヒガラ	XC263397	CC BY-NC-SA 4.0	Jim Holmes	Rusutsu-mura, Hokkaidō (song, rating 5)	det hits 4/5 max 0.86
+ヒガラ	XC900885	CC BY-NC-ND 4.0	Goro	Suburbs of Sapporo, Hokkaido (song, rating 4)	det hits 7/8 max 0.77
+ヒガラ	XC479571	CC BY-NC-SA 4.0	Phil Gregory	Shiretoko Pass (call, rating 4)	det hits 8/8 max 0.78
+エナガ	XC286244	CC BY-NC-ND 4.0	Peter Boesman	Oketo Lake forest, Hokkaido (call, rating 5)	det hits 6/6 max 0.91
+エナガ	XC897029	CC BY-NC-ND 4.0	Goro	Suburbs of Sapporo, Hokkaido (call, rating 4)	det hits 8/8 max 0.94
+エナガ	XC915175	CC BY-NC-SA 4.0	Uku Paal	Kyoto, Kyoto (call, rating 4)	det hits 8/8 max 0.85
+エナガ	XC858017	CC BY-NC-SA 4.0	Joshua Chong	Nakashibetsu, Hokkaido Prefecture (call, rating 4)	det hits 8/8 max 0.95
+シロハラ	XC989854	CC BY-NC-ND 4.0	Goro	Suburbs of Sapporo, Hokkaido (song, rating 5)	miss hits 0/8 max 0.04
+シロハラ	XC282243	CC BY-NC-SA 4.0	Ko Chie-Jen (Jerome)	Yakushima-chō, Kagoshima-ken (call, rating 4)	miss hits 1/2 max 0.24
+ツグミ	XC884476	CC BY-NC-SA 4.0	Barry Edmonston	Izumi, Kagoshima (song, call, rating 5)	miss hits 0/8 max 0.00
+ツグミ	XC841052	CC BY-NC-SA 4.0	GABRIEL LEITE	Sapporo, Hokkaido (call, rating 3)	miss hits 0/4 max 0.03
+ツグミ	XC640547	CC BY-NC-SA 4.0	soremoz	Osaka, Osaka (song, rating 2)	miss hits 0/8 max 0.09
+イソヒヨドリ	XC285869	CC BY-NC-ND 4.0	Peter Boesman	Coastal road,Miyakejima (song, rating 5)	det hits 4/8 max 0.26
+イソヒヨドリ	XC474444	CC BY-NC-SA 4.0	Markus Jacobs	Tokashiki-son, Shimajiri-gun, Okinawa (song, rating 4)	det hits 6/8 max 0.32
+イソヒヨドリ	XC236032	CC BY-NC-SA 4.0	Stijn De Win	Kunigami-son, Okinawa-ken (song, rating 4)	miss hits 0/8 max 0.07
+イソヒヨドリ	XC192409	CC BY-NC-SA 4.0	Ross Gallardy	Kin, Okinawa Prefecture (song, rating 4)	miss hits 1/7 max 0.16
+キセキレイ	XC286198	CC BY-NC-ND 4.0	Peter Boesman	Aizanke mountain road, Asahikawa region (song, rating 4)	det hits 6/8 max 0.46
+キセキレイ	XC988628	CC BY-NC-SA 4.0	Andy Birch	Shijo Keihan mae (near  Kyoto), Kyoto (call, rating 3)	det hits 1/3 max 0.56
+キセキレイ	XC202788	CC BY-NC-SA 4.0	Ross Gallardy	Kunigami, Okinawa (flight call, rating 3)	miss hits 1/1 max 0.14
+キセキレイ	XC581687	CC BY-NC-SA 4.0	Eric DeFonso	Nanzen-ji Temple grounds, Kyoto, Kyoto (call, rating 2)	det hits 5/6 max 0.76
+シメ	XC581689	CC BY-NC-SA 4.0	Eric DeFonso	Imperial Park, Kyoto, 京都府, Kyoto (call, rating 4)	det hits 7/8 max 0.82
+シメ	XC841048	CC BY-NC-SA 4.0	GABRIEL LEITE	Sapporo, Hokkaido (call, rating 3)	det hits 6/6 max 0.94
+シメ	XC1016843	CC BY-NC-SA 4.0	Uku Paal	Nemuro, Hokkaido (call, flight call, rating 3)	det hits 2/2 max 0.63
+ウソ	XC286348	CC BY-NC-ND 4.0	Peter Boesman	Rausu pass, Hokkaido (call, rating 4)	miss hits 1/5 max 0.08
+ウソ	XC155654	CC BY-NC-ND 4.0	Frank Lambert	Lake Furen (site 4) Hokkaido (call, rating 3)	det hits 3/4 max 0.57
+ウソ	XC864033	CC BY-NC-SA 4.0	Joshua Chong	Shunkunitai Nature Centre (call, rating 3)	miss hits 1/4 max 0.13
+ウソ	XC1016655	CC BY-NC-SA 4.0	Uku Paal	藻琴山 (near  Teshikaga), Kawakami District (call, rating 3)	det hits 3/3 max 0.51
+カワラヒワ	XC872882	CC BY-NC-ND 4.0	Goro	Suburbs of Sapporo, Hokkaido (song, call, rating 5)	det hits 3/8 max 0.14
+カワラヒワ	XC285862	CC BY-NC-ND 4.0	Peter Boesman	Tairo-Ike, Miyakejima (song, short song, rating 5)	det hits 6/8 max 0.21
+カワラヒワ	XC733021	CC BY-NC-SA 4.0	Geoff Carey	Chitose, Hokkaido (call, territorial call, rating 5)	miss hits 0/8 max 0.03
+カワラヒワ	XC506555	CC BY-NC-SA 4.0	Amar-Singh HSS	Lake Furen (site 3) Hokkaido (song, rating 5)	det hits 3/3 max 0.21
+ホオジロ	XC992954	CC BY-NC-SA 4.0	Xavier Riera	Kanazawa, Ishikawa (song, rating 5)	det hits 7/8 max 0.70
+ホオジロ	XC626398	CC BY-NC-SA 4.0	Jerome Chie-Jen Ko	Nantan, Kyoto (call, rating 5)	det hits 8/8 max 0.62
+アオジ	XC1016829	CC BY-NC-SA 4.0	Uku Paal	Teshikaga, Kawakami District, Hokkaido (song, rating 5)	miss hits 0/8 max 0.00
+アオジ	XC420551	CC BY-NC-SA 4.0	Yann Muzika	Lake Kussharo, Teshikaga, Hokkaido Prefe (song, rating 5)	miss hits 0/8 max 0.00
+アオジ	XC491625	CC BY-NC-SA 4.0	Markus Jacobs	Hokkaido (near  Hamanaka), Akkeshi-gun,  (song, rating 5)	miss hits 0/6 max 0.00
+ジョウビタキ	XC1087929	CC BY-NC-SA 4.0	Ray Tsu 诸仁	CN: Bai Hua Gang, Songjiang, Shanghai (song, subsong, whisper song, rating 5)	miss hits 1/8 max 0.18
+ジョウビタキ	XC1147674	CC BY-NC-ND 4.0	Peter Boesman	CN: Longkonshan NNR, Shanxi (song, rating 5)	det hits 5/8 max 0.30
+ジョウビタキ	XC1005445	CC BY-NC-SA 4.0	Zhen niu	CN: Lingshan road close to Jiangshuihe v (song, rating 5)	miss hits 0/8 max 0.07
+キジ	iNat231580226_s1142981	CC-BY	tbc_watanabe	日本、〒191-0001 東京都日野市栄町	miss hits 0/2 max 0.00
+キジ	iNat70490059_s168421	CC-BY	tbc_watanabe	日本、〒192-0915 東京都八王子市宇津貫町１４８１−３	miss hits 0/2 max 0.00
+オナガ	iNat398695065_s2153650	CC-BY	mami_t_t	日本、〒206-0022 東京都多摩市聖ケ丘	det hits 5/5 max 0.89
+オナガ	iNat146344201_s583678	CC0	nekonomix	日本 〒196-0012	det hits 6/8 max 0.87
+オナガ	iNat376973831_s2051062	CC0	bko98212	Sagamihara, JP-KN, JP	det hits 2/2 max 0.44
+ハシブトガラス	iNat280736285_s1459281	CC-BY	karliatje	1-60 Uenokōen, Taito City, Tokyo 110-000	miss hits 1/3 max 0.11
+ハシブトガラス	iNat188787162_s836230	CC0	kalvinchan	1 Hamarikyuteien, Chuo City, Tokyo 104-0	det hits 1/1 max 0.47
+ハシブトガラス	iNat249434213_s1239564	CC0	funnieanimals	15 Udagawacho, Shibuya City, Tokyo 150-0	miss hits 0/1 max 0.02
+ヒガラ	iNat361038125_s1947063	CC0	ellyne	Kamikatsu, JP-TS, JP	det hits 4/5 max 0.88
+ヒガラ	iNat247395955_s1229881	CC-BY	doju	Saiko Wild Bird Forest Park, Fujikawaguc	det hits 3/3 max 0.70
+ヒガラ	iNat226075658_s1114570	CC-BY	imori_miho	日本、〒198-0175 東京都青梅市御岳山１６	det hits 3/5 max 0.82
+ツバメ	iNat356649810_s1913253	CC0	quercus_e	182 Kawaguchi, Fujikawaguchiko, Minamits	det hits 2/2 max 0.86
+ツバメ	iNat161344729_s694708	CC-BY	tbc_watanabe	日本、〒206-0001 東京都多摩市和田１７９４−６	det hits 3/3 max 0.64
+ツバメ	iNat348301895_s1847518	CC-BY	mami_t_t	日本、〒206-0011 東京都多摩市関戸	det hits 3/3 max 0.81
+エナガ	iNat338910245_s1769194	CC-BY	mimi_0213	熊本城公園, 熊本市, 熊本縣, JP	det hits 1/1 max 0.92
+エナガ	iNat101572645_s331060	CC-BY	imori_miho	日本 〒206-0022	det hits 6/7 max 0.94
+エナガ	iNat158457794_s672088	CC-BY	mami_t_t	日本 〒206-0021	det hits 2/2 max 0.54
+イソヒヨドリ	iNat324130606_s1682639	CC0	blueybirdy	707-1 Myōdenjichō, Shimogyo Ward, Kyoto,	miss hits 0/3 max 0.04
+イソヒヨドリ	iNat282877190_s1475804	CC-BY	karliatje	Izu, JP-SZ, JP	miss hits 0/6 max 0.01
+イソヒヨドリ	iNat352190608_s1876411	CC-BY	mami_t_t	日本、〒206-0011 東京都多摩市関戸	miss hits 0/4 max 0.00
+キセキレイ	iNat374572226_s2038641	CC-BY	mami_t_t	日本 〒206-0021	det hits 4/8 max 0.45
+キセキレイ	iNat359683773_s1936497	CC-BY	timur_kalininsky	Нарукоонсен, Осаки, Мияги, Япония	det hits 4/8 max 0.86
+キセキレイ	iNat270117007_s1372687	CC-BY	treyjp	Minobu, Minamikoma District, Yamanashi 4	det hits 1/1 max 0.56
+シメ	iNat350460256_s1864318	CC-BY	tbc_watanabe	日本、〒206-0001 東京都多摩市和田１３３６−７ 和田の森緑地	det hits 2/3 max 0.54
+カワラヒワ	iNat266677992_s1346850	CC-BY	doju	Honshu, Chichibu, Saitama, JP	miss hits 0/4 max 0.07
+ホオジロ	iNat73563063_s185484	CC-BY	tbc_watanabe	日本、〒183-0034 東京都府中市住吉町	miss hits 1/1 max 0.16
+ホオジロ	iNat293650516_s1546502	CC-BY	rajanrao	Funatsu, Fujikawaguchiko, Minamitsuru Di	det hits 2/3 max 0.12
+ホオジロ	iNat332012810_s1724048	CC-BY	hamsambly	Higashiyokacho Oaza Shimokoga, Saga, 840	det hits 5/5 max 0.96
+アオジ	iNat331074972_s1718178	CC-BY	hamsambly	Higashi Ward, Kumamoto, Japan	miss hits 0/3 max 0.00
+アオジ	iNat331072445_s1718159	CC-BY	hamsambly	Higashi Ward, Kumamoto, Japan	miss hits 0/3 max 0.00
+アオジ	iNat307690114_s1610176	CC-BY	spint	Koshimizu Gensei-kaen (Wildflower Preser	miss hits 0/4 max 0.00
+カワラバト（ドバト）	iNat393960436_s2131721	CC0	artemesia	Fayetteville, AR 72701, USA	miss hits 0/3 max 0.04
+カワラバト（ドバト）	iNat383219365_s2079699	CC-BY	slaven_kljucanin	Pont Saint-Bénézet, 84000 Avignon, Franc	det hits 4/4 max 0.54
+カワラバト（ドバト）	iNat358572358_s1928468	CC-BY	reishisagnik	3GC4+RG, Deolo, Kalimpong, West Bengal 7	det hits 3/8 max 0.51
+ジョウビタキ	iNat333965159_s1735846	CC-BY	hamsambly	Mae Fa Luang, Mae Fa Luang District, Chi	miss hits 0/6 max 0.00
+ジョウビタキ	iNat70729938_s169712	CC-BY	zinogre	Zhengzhou, Henan, China	miss hits 0/3 max 0.07
+ジョウビタキ	iNat65465107_s150479	CC-BY	chiuluan	Hualien, TW-TA, TW	det hits 3/4 max 0.11

@@ -1,0 +1,72 @@
+# birdframe config (copy to config/birdframe.yaml and edit).
+# Relative paths are resolved against the repository root.
+
+model:
+  path: data/models/perch_v2_dynint8.tflite   # int8: ~105 MB file, ~0.6 GB RSS (fp16 ~1.75 GB)
+  threads: 4
+  full_japan: false            # false = garden-30 mask
+
+audio:
+  device: null                 # null = default input; or a name substring e.g. "FIFINE" / "USB"
+  samplerate: 48000            # capture rate; resampled to 32 kHz for Perch
+  hop_sec: 5.0                 # one 5 s window every hop_sec
+
+detect:
+  threshold: 0.08              # window top-1 prob to count as a hit
+  exit_threshold: 0.04
+  min_hits: 2                  # hits within smooth_window to enter
+  score_sum: 0.25
+  smooth_window_sec: 60
+  min_hold_sec: 30
+  max_present: 3               # up to 3 panels side by side
+
+display:
+  backend: inky                # inky | file
+  refresh_speed: medium        # normal ~30 s | medium ~23 s (slightly paler) | fast ~15 s (green olive, blue pale; experimental)
+  out_dir: out/frames/live     # used by the file backend
+  min_interval_sec: 900        # only used when `schedule` is removed (old mode)
+  quiet_hours: {start: "22:00", end: "06:00"}   # only used when `schedule` is removed (old mode)
+  schedule:                    # production display rules (remove this block for the old min_interval/quiet_hours mode)
+    day_start: "06:00"         # day: a heard bird is shown at once
+    day_end: "19:00"
+    group_window_min: 15       # each bird stays 15 min from its own arrival, then drops out at once (the newest stays)
+    max_birds: 3               # a 4th bird pushes out the oldest
+    night_end: "00:00"         # 19:00-00:00: today's birds one at a time
+    night_interval_min: 30     # ... every 30 min; 00:00-06:00 the screen stays as it is
+  state_path: var/state.json   # remembers last seen bird across restarts
+  dither: vivid                # vivid | fs | none
+  saturation: 0.5              # inky palette blend (0 = pure, 1 = measured inks)
+  color_boost: 1.5
+  contrast: 1.1
+  gamma: 1.3
+  mount: true                  # hairline mount (classic layout only)
+  layout: full                 # full: painting fills the screen, tiny signature | classic: 800x480 + big caption
+  orientation: portrait        # portrait (480x800) | landscape (800x480); landscape ignores rotation
+  rotation: 90                 # portrait only. 90: turn the frame 90 deg CLOCKWISE from the panel's
+                               # normal landscape pose (Pi's USB-C power/HDMI long edge ends up on the LEFT).
+                               # 270: turn it COUNTER-clockwise (that edge on the RIGHT).
+  art_context: 1.7             # how much room around the bird (smaller = bird bigger, more crop)
+  signature:
+    enabled: true              # false = no text at all
+    size: 15                   # px; small caption "名前　作者" on a tiny paper plate
+    corner: br                 # tl | tr | bl | br
+
+idle:
+  mode: last_seen              # last_seen | seasonal
+  last_seen_max_age_h: 24
+  seasonal:                    # [和名, scientific name]
+    spring: [ウグイス, Horornis diphone]
+    summer: [ツバメ, Hirundo rustica]
+    autumn: [スズメ, Passer montanus]
+    winter: [メジロ, Zosterops japonicus]
+
+art:
+  min_confidence: medium       # skip low-confidence species matches (shown as name-only panel)
+  styles: [kachoga, natural_history]  # which art styles to show: kachoga (Japanese 花鳥画 / Edo albums),
+                                      # natural_history (scientific colour plates: Fauna Japonica, Gould, ...)
+  style_mode: rotate           # rotate: mix allowed styles day by day; prefer: first style in `styles`
+                               # that has art for the species, falling back to the next
+  catalog: data/artworks/artworks.csv
+  crops: data/artworks/crops.yaml
+  originals: assets/originals
+  cache: assets/cache

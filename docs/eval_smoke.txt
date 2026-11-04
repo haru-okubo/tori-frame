@@ -1,0 +1,37 @@
+Smoke eval on box CPU (2026-10-20 Asia/Tokyo)
+Model: perch_v2_fp16.tflite (~196 MB on disk; HF ernensbjorn, Apache-2.0)
+Runtime: ai-edge-litert, 4 threads, XNNPACK
+Audio: Xeno-canto clips listed in samples/MANIFEST.txt (local only; not committed)
+Scoring: full_softmax then Japan/garden mask; best window by top-1 prob
+
+IMPORTANT: first perch_index build used GCS labels.csv including leading
+"inat2024_fsd50k" tag → off-by-one vs TFLite. Fixed to labels.txt; numbers below
+are AFTER that fix.
+
+=== garden mask (30 spp), full_softmax ===
+XC455407 スズメ      -> スズメ      ok  p=0.862   ~690–3070 ms/win (first win cold)
+XC409025 ヒヨドリ     -> ウグイス     miss p=0.088
+XC155869 ヒヨドリ     -> ヒヨドリ     ok  p=0.185
+XC841080 ウグイス     -> ヒヨドリ     miss p=0.072
+XC122542 ウグイス     -> オナガ      miss p=0.008
+XC69777  メジロ      -> メジロ      ok  p=0.341
+XC844658 ムクドリ     -> ムクドリ     ok  p=0.015
+XC547689 キジバト     -> キジバト     ok  p=0.915
+accuracy 5/8   mean_ms ~992 (includes cold start); steady ~680–750 ms/window
+
+=== Japan-full mask (658 spp), full_softmax ===
+XC455407 スズメ      -> スズメ      ok  p=0.862
+XC409025 ヒヨドリ     -> ウグイス     miss
+XC155869 ヒヨドリ     -> ホトトギス    miss (ヒヨドリ 2nd p=0.121)
+XC841080 ウグイス     -> ヒヨドリ     miss
+XC122542 ウグイス     -> キタヤナギムシクイ miss
+XC69777  メジロ      -> メジロ      ok
+XC844658 ムクドリ     -> ホシムクドリ   miss (related starling)
+XC547689 キジバト     -> キジバト     ok
+accuracy 3/8   mean_ms ~698
+
+Notes:
+- n=8 short XC excerpts; not a formal benchmark. Some misses may be clip quality /
+  call type / background, not only model error.
+- Garden mask helps when confusable non-garden species outrank (e.g. ホシムクドリ).
+- Threshold 0.15 is a starting point; several true positives sit near/below it.

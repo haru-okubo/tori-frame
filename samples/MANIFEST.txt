@@ -1,0 +1,35 @@
+# Local-only Xeno-canto test clips (do NOT commit audio).
+# Species verified via HTTP Content-Disposition on /<id>/download (not guessed).
+# Many XC licenses are CC BY-NC-*; local evaluation only — do not redistribute.
+# file	expected_sci	expected_wamei	xc_id
+samples/xc/XC455407_Passer_montanus_15s.wav	Passer montanus	スズメ	XC455407
+samples/xc/XC455408_Passer_montanus_15s.wav	Passer montanus	スズメ	XC455408
+samples/xc/XC455409_Passer_montanus_15s.wav	Passer montanus	スズメ	XC455409
+samples/xc/XC936173_Passer_montanus_15s.wav	Passer montanus	スズメ	XC936173
+samples/xc/XC409025_Hypsipetes_amaurotis_15s.wav	Hypsipetes amaurotis	ヒヨドリ	XC409025
+samples/xc/XC155869_Hypsipetes_amaurotis_15s.wav	Hypsipetes amaurotis	ヒヨドリ	XC155869
+samples/xc/XC841079_Hypsipetes_amaurotis_15s.wav	Hypsipetes amaurotis	ヒヨドリ	XC841079
+samples/xc/XC1082364_Hypsipetes_amaurotis_15s.wav	Hypsipetes amaurotis	ヒヨドリ	XC1082364
+samples/xc/XC1012281_Hypsipetes_amaurotis_15s.wav	Hypsipetes amaurotis	ヒヨドリ	XC1012281
+samples/xc/XC155864_Hypsipetes_amaurotis_15s.wav	Hypsipetes amaurotis	ヒヨドリ	XC155864
+samples/xc/XC841080_Horornis_diphone_15s.wav	Horornis diphone	ウグイス	XC841080
+samples/xc/XC122542_Horornis_diphone_15s.wav	Horornis diphone	ウグイス	XC122542
+samples/xc/XC155870_Horornis_diphone_15s.wav	Horornis diphone	ウグイス	XC155870
+samples/xc/XC194292_Horornis_diphone_15s.wav	Horornis diphone	ウグイス	XC194292
+samples/xc/XC1016608_Horornis_diphone_15s.wav	Horornis diphone	ウグイス	XC1016608
+samples/xc/XC155871_Horornis_diphone_15s.wav	Horornis diphone	ウグイス	XC155871
+samples/xc/XC409023_Horornis_diphone_15s.wav	Horornis diphone	ウグイス	XC409023
+samples/xc/XC69777_Zosterops_japonicus_15s.wav	Zosterops japonicus	メジロ	XC69777
+samples/xc/XC69776_Zosterops_japonicus_15s.wav	Zosterops japonicus	メジロ	XC69776
+samples/xc/XC155880_Zosterops_japonicus_15s.wav	Zosterops japonicus	メジロ	XC155880
+samples/xc/XC194291_Zosterops_japonicus_15s.wav	Zosterops japonicus	メジロ	XC194291
+samples/xc/XC844658_Spodiopsar_cineraceus_15s.wav	Spodiopsar cineraceus	ムクドリ	XC844658
+samples/xc/XC547689_Streptopelia_orientalis_15s.wav	Streptopelia orientalis	キジバト	XC547689
+samples/xc/XC155872_Parus_minor_15s.wav	Parus minor	シジュウカラ	XC155872
+samples/xc/XC155873_Parus_minor_15s.wav	Parus minor	シジュウカラ	XC155873
+samples/xc/XC122530_Corvus_corone_15s.wav	Corvus corone	ハシボソガラス	XC122530
+samples/xc/XC1018590_Yungipicus_kizuki_15s.wav	Yungipicus kizuki	コゲラ	XC1018590
+samples/xc/XC155863_Yungipicus_kizuki_15s.wav	Yungipicus kizuki	コゲラ	XC155863
+samples/xc/XC286180_Yungipicus_kizuki_15s.wav	Yungipicus kizuki	コゲラ	XC286180
+samples/xc/XC286178_Sittiparus_varius_15s.wav	Sittiparus varius	ヤマガラ	XC286178
+samples/xc/XC281925_Motacilla_alba_15s.wav	Motacilla alba	ハクセキレイ	XC281925

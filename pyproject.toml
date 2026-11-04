@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "birdframe"
+version = "0.1.0"
+description = "Local Japanese garden-bird classifier + Spectra 6 e-ink frame (Perch v2)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "bird-frame contributors" }]
+dependencies = [
+  "numpy>=1.24",
+  "soundfile>=0.12",
+  "resampy>=0.4",
+  "ai-edge-litert>=1.0",
+  "huggingface-hub>=0.23",
+  "Pillow>=10.0",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pandas>=2.0", "openpyxl>=3.1"]
+build-data = ["pandas>=2.0", "openpyxl>=3.1"]
+pi = ["inky>=2.0", "sounddevice>=0.4"]   # Raspberry Pi: e-ink + mic
+
+[project.scripts]
+birdframe = "birdframe.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

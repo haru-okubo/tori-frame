@@ -1,0 +1,42 @@
+clips: 31  threads: 4  rule: argmax sum(full_softmax) over windows, garden mask
+perch_v2_fp16.tflite: top1 26/31  latency ms/window mean 666 p50 663 p95 692  load 1.2s  maxRSS so far 1750 MB
+perch_v2_dynint8.tflite: top1 26/31  latency ms/window mean 672 p50 662 p95 710  load 0.1s  maxRSS so far 1750 MB
+prediction agreement perch_v2_fp16.tflite vs perch_v2_dynint8.tflite: 31/31
+
+file	expected	perch_v2_fp16.tflite	perch_v2_dynint8.tflite
+XC455407	スズメ	スズメ(0.77)	スズメ(0.76)
+XC455408	スズメ	スズメ(0.95)	スズメ(0.94)
+XC455409	スズメ	スズメ(0.52)	スズメ(0.42)
+XC936173	スズメ	スズメ(0.69)	スズメ(0.70)
+XC409025	ヒヨドリ	ウグイス(0.09)	ウグイス(0.08)
+XC155869	ヒヨドリ	ヒヨドリ(0.18)	ヒヨドリ(0.22)
+XC841079	ヒヨドリ	ヒヨドリ(0.93)	ヒヨドリ(0.92)
+XC1082364	ヒヨドリ	メジロ(0.01)	メジロ(0.01)
+XC1012281	ヒヨドリ	ヒヨドリ(0.93)	ヒヨドリ(0.93)
+XC155864	ヒヨドリ	ヒヨドリ(0.55)	ヒヨドリ(0.53)
+XC841080	ウグイス	ヒヨドリ(0.04)	ヒヨドリ(0.03)
+XC122542	ウグイス	オナガ(0.01)	オナガ(0.01)
+XC155870	ウグイス	ウグイス(0.41)	ウグイス(0.38)
+XC194292	ウグイス	ウグイス(0.38)	ウグイス(0.36)
+XC1016608	ウグイス	ウグイス(0.59)	ウグイス(0.58)
+XC155871	ウグイス	ウグイス(0.17)	ウグイス(0.16)
+XC409023	ウグイス	ウグイス(0.82)	ウグイス(0.80)
+XC69777	メジロ	メジロ(0.34)	メジロ(0.29)
+XC69776	メジロ	メジロ(0.24)	メジロ(0.24)
+XC155880	メジロ	メジロ(0.50)	メジロ(0.50)
+XC194291	メジロ	メジロ(0.04)	メジロ(0.05)
+XC844658	ムクドリ	ムクドリ(0.03)	ムクドリ(0.04)
+XC547689	キジバト	キジバト(0.81)	キジバト(0.77)
+XC155872	シジュウカラ	シジュウカラ(0.54)	シジュウカラ(0.55)
+XC155873	シジュウカラ	シジュウカラ(0.22)	シジュウカラ(0.23)
+XC122530	ハシボソガラス	ハシボソガラス(0.07)	ハシボソガラス(0.06)
+XC1018590	コゲラ	ウグイス(0.31)	ウグイス(0.35)
+XC155863	コゲラ	コゲラ(0.19)	コゲラ(0.20)
+XC286180	コゲラ	コゲラ(0.62)	コゲラ(0.58)
+XC286178	ヤマガラ	ヤマガラ(0.09)	ヤマガラ(0.09)
+XC281925	ハクセキレイ	ハクセキレイ(0.71)	ハクセキレイ(0.67)
+
+
+Note on memory: the maxRSS printed above is process-cumulative (fp16 ran in the same
+process). Separate runs, peak RSS: int8 ≈ 599 MB, fp16 ≈ 1750 MB.
+Latency above is the x86 dev box; Raspberry Pi 4 latency not yet measured.

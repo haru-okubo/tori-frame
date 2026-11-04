@@ -1,0 +1,59 @@
+Smoke eval garden-31 XC clips (2026-10-20 Asia/Tokyo)
+Model: perch_v2_fp16.tflite  mask: garden-30  score: full_softmax
+Best window-top1 threshold: 0.05
+top1 accuracy: 26/31
+event last-present accuracy: 23/25
+mean inference ms/window: 796
+
+per-species:
+  ウグイス: 5/7
+  キジバト: 1/1
+  コゲラ: 2/3
+  シジュウカラ: 2/2
+  スズメ: 4/4
+  ハクセキレイ: 1/1
+  ハシボソガラス: 1/1
+  ヒヨドリ: 4/6
+  ムクドリ: 1/1
+  メジロ: 4/4
+  ヤマガラ: 1/1
+
+confusion misses:
+  ヒヨドリ -> ウグイス  x1
+  ヒヨドリ -> メジロ  x1
+  ウグイス -> ヒヨドリ  x1
+  ウグイス -> オナガ  x1
+  コゲラ -> ウグイス  x1
+
+rows:
+  XC455407 スズメ -> スズメ ok=True p=0.768
+  XC455408 スズメ -> スズメ ok=True p=0.950
+  XC455409 スズメ -> スズメ ok=True p=0.523
+  XC936173 スズメ -> スズメ ok=True p=0.694
+  XC409025 ヒヨドリ -> ウグイス ok=False p=0.088
+  XC155869 ヒヨドリ -> ヒヨドリ ok=True p=0.185
+  XC841079 ヒヨドリ -> ヒヨドリ ok=True p=0.925
+  XC1082364 ヒヨドリ -> メジロ ok=False p=0.007
+  XC1012281 ヒヨドリ -> ヒヨドリ ok=True p=0.926
+  XC155864 ヒヨドリ -> ヒヨドリ ok=True p=0.551
+  XC841080 ウグイス -> ヒヨドリ ok=False p=0.041
+  XC122542 ウグイス -> オナガ ok=False p=0.008
+  XC155870 ウグイス -> ウグイス ok=True p=0.413
+  XC194292 ウグイス -> ウグイス ok=True p=0.382
+  XC1016608 ウグイス -> ウグイス ok=True p=0.587
+  XC155871 ウグイス -> ウグイス ok=True p=0.170
+  XC409023 ウグイス -> ウグイス ok=True p=0.822
+  XC69777 メジロ -> メジロ ok=True p=0.341
+  XC69776 メジロ -> メジロ ok=True p=0.240
+  XC155880 メジロ -> メジロ ok=True p=0.499
+  XC194291 メジロ -> メジロ ok=True p=0.045
+  XC844658 ムクドリ -> ムクドリ ok=True p=0.031
+  XC547689 キジバト -> キジバト ok=True p=0.808
+  XC155872 シジュウカラ -> シジュウカラ ok=True p=0.538
+  XC155873 シジュウカラ -> シジュウカラ ok=True p=0.218
+  XC122530 ハシボソガラス -> ハシボソガラス ok=True p=0.069
+  XC1018590 コゲラ -> ウグイス ok=False p=0.306
+  XC155863 コゲラ -> コゲラ ok=True p=0.192
+  XC286180 コゲラ -> コゲラ ok=True p=0.619
+  XC286178 ヤマガラ -> ヤマガラ ok=True p=0.095
+  XC281925 ハクセキレイ -> ハクセキレイ ok=True p=0.708

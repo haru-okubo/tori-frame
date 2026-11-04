@@ -1,0 +1,22 @@
+# /etc/systemd/system/birdframe.service
+# Edit User/paths if your user is not "pi" or the repo is elsewhere.
+[Unit]
+Description=bird-frame: garden bird detection -> Inky Impression e-ink
+After=sound.target network-online.target
+Wants=sound.target
+
+[Service]
+Type=simple
+User=pi
+SupplementaryGroups=audio spi gpio i2c
+WorkingDirectory=/home/pi/bird-frame
+ExecStart=/home/pi/bird-frame/.venv/bin/birdframe run --config /home/pi/bird-frame/config/birdframe.yaml
+Restart=on-failure
+RestartSec=30
+Environment=PYTHONUNBUFFERED=1
+# Keep inference from starving the system on a 2 GB Pi 4
+Nice=5
+MemoryMax=1400M
+
+[Install]
+WantedBy=multi-user.target
